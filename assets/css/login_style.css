@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Fredoka One', sans-serif;
+}
+:root{
+    --choco-milk:#8f6b57;
+    --choco-dark: #4b2e2b ;
+    --choco-background: #22160f;
+    --choco-white: #f4e3d7;
+    --text-color-one:#25120d;
+}
+::-webkit-scrollbar{
+    z-index: -111111111;
+    width: 0.2vw;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--choco-background);
+    border-radius: 10px;
+    z-index: -111111111;
+    position: fixed;
+    right: 0;
+}
+body{
+    background-color: var(--choco-white);
+}
+main{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.go-back{
+    position: absolute;
+    font-size: larger;
+    padding: 1ch; 
+}
+.go-back button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: large;
+}
+.go-back i{
+    align-items: center;
+    background-color: var(--choco-dark);
+    padding: 1ch;
+    border-radius: 50%;
+    color: var(--choco-white);
+}
+
+/*-------------left part of the login---------------*/
+.login--left{
+    width: 50%;
+    margin: auto;
+}
+.login--content{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.login--content h1{
+    font-size: 40px;
+    color: var(--text-color-one);
+}
+.login--content p{
+    font-size: 17px;
+    margin-block: 1ch;
+}
+.login--input{
+    background-color: rgb(221, 221, 221);
+    border: 2px solid var(--choco-dark);
+    padding: 1ch;
+    padding-left: 1ch;
+    width: 50%;
+    border-radius: 1ch;
+    display: flex;
+    margin-block:20px;
+    margin-inline: auto;
+}
+#login--icon{
+    width: 27px;
+    height: 27px;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    color: #221206ce;
+}
+.login--input input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    outline-color:transparent;
+    font-size: 17px;
+    margin-block: auto;
+    padding-left: 10px;
+    padding: auto;
+}
+.button{
+    padding: 2vh;
+    padding-inline: 3ch;
+    width: 11vw;
+    border-radius: 1ch;
+    border: none;
+    background-color: var(--choco-dark);
+    color: var(--choco-white);
+    font-size: 15px;
+}
+.toSignin{
+    margin-bottom: 1ch;
+}
+.toSignin a{
+    color: var(--choco-dark);
+}
+.toHome{
+    text-decoration: none;
+}
+.error{
+    color: var(--white);
+    background-color: rgb(209, 96, 96);
+    border: 2px solid rgb(199, 72, 72);
+    justify-content: center;
+    margin: auto;
+    width: 20vw;
+    padding: 5px;
+    margin-top: 4vh;
+    display: none;
+}
+.error i{
+    width: 25px;  
+    height: 25px;
+    color: var(--choco-white);
+}
+.error p{
+    margin-inline: 1ch;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--choco-white);
+}
+
+
+
+/*---------right part of the login----------*/
+.login--right{
+    width: 50%;
+    overflow: hidden;
+}
+.login--background{
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.choco--login-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 8%; 
+    margin-right: 7%;
+    height: 70vh;
+    border-radius: 50%;
+    animation: login--image--scale 2.5s infinite;
+}
+@keyframes login--image--scale {
+    0%{
+        transform: translateY(15px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(15px);
+    }
+}
+
+
+
+/*-------------responsive design--------------*/
+@media screen and (max-width:1000px) {
+ 
+    main{
+        width: 100%;
+        display: block;
+        height: auto;
+        overflow: hidden;
+    }
+    .login--left{
+        width: 100%;
+        height: 65vh;
+        padding-block-start: 15ch;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .login--input{
+        width: auto;
+        margin-inline: 1ch;
+    }
+    .toLogin{
+        width: 100%;
+    }
+    .toHome{
+        width: 5ch;
+        text-align: center;
+    }
+    .button{
+        padding: 2vh;
+        width: 20vw;
+        border-radius: 1ch;
+        border: none;
+        font-size: 15px;
+    }
+    .error{
+        width: auto;
+    }
+    .login--right{
+        width: 100%;
+        overflow: hidden;
+    }
+    .login--background{
+        overflow: hidden;
+    }
+    .choco--login-img{
+        margin-bottom: 0;
+        height: 50vh;
+        bottom: -60vh;
+        right: 10vw;
+    }
+}
+@media (max-width:450px) {
+    .choco--login-img{
+        margin-bottom: 0;
+        height: 50vh;
+        bottom: -60vh;
+        right: -10vw;
+    }
+}
